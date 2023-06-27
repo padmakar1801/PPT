@@ -1,0 +1,19 @@
+public class Staircase {
+    public static int countCompleteRows(int n) {
+        int k = 0;
+        int sum = 0;
+
+        while (sum <= n) {
+            k++;
+            sum += k;
+        }
+
+        return k - 1;
+    }
+
+    public static void main(String[] args) {
+        int n = 5;
+        int completeRows = countCompleteRows(n);
+        System.out.println(completeRows);
+    }
+}
