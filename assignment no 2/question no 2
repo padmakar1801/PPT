@@ -1,0 +1,22 @@
+import java.util.HashSet;
+
+public class MaxCandies {
+    public static int maxCandies(int[] candyType) {
+        HashSet<Integer> uniqueCandies = new HashSet<>();
+
+        for (int candy : candyType) {
+            uniqueCandies.add(candy);
+        }
+
+        int maxCandies = Math.min(uniqueCandies.size(), candyType.length / 2);
+
+        return maxCandies;
+    }
+
+    public static void main(String[] args) {
+        int[] candyType = {1, 1, 2, 2, 3, 3};
+
+        int maxCandies = maxCandies(candyType);
+        System.out.println(maxCandies); 
+    }
+}
