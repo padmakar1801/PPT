@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class AnagramIndices {
+    public static List<Integer> findAnagrams(String s, String p) {
+        List<Integer> result = new ArrayList<>();
+
+        int[] pCount = new int[26];
+        int[] sCount = new int[26];
+
+        int matchCount = 0;
+        int pLength = p.length();
+        int sLength = s.length();
+
+        for (char c : p.toCharArray()) {
+            pCount[c - 'a']++;
+        }
+
+        int left = 0;
+        for (int right = 0; right < sLength; right++) {
+            char rightChar = s.charAt(right);
+            sCount[rightChar - 'a']++;
+
+            if (sCount[rightChar - 'a'] <= pCount[rightChar - 'a']) {
+                matchCount++;
+            }
+
+            if (right - left + 1 > pLength) {
+                char leftChar = s.charAt(left);
+                sCount[leftChar - 'a']--;
+
+                if (sCount[leftChar - 'a'] < pCount[leftChar - 'a']) {
+                    matchCount--;
+                }
+
+                left++;
+            }
+
+            if (matchCount == pLength) {
+                result.add(left);
+            }
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        String s = "cbaebabacd";
+        String p = "abc";
+        List<Integer> indices = findAnagrams(s, p);
+
+        System.out.println("Anagram indices: " + indices);
+    }
+}
