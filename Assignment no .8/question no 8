@@ -1,0 +1,40 @@
+public class SwapStrings {
+    public static boolean canSwapStrings(String s, String goal) {
+        if (s.length() != goal.length()) {
+            return false;
+        }
+
+        int mismatches = 0;
+        int firstMismatchIndex = -1;
+        int secondMismatchIndex = -1;
+
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) != goal.charAt(i)) {
+                mismatches++;
+                if (mismatches > 2) {
+                    return false;
+                }
+                if (firstMismatchIndex == -1) {
+                    firstMismatchIndex = i;
+                } else {
+                    secondMismatchIndex = i;
+                }
+            }
+        }
+
+        if (mismatches != 2) {
+            return false;
+        }
+
+        return s.charAt(firstMismatchIndex) == goal.charAt(secondMismatchIndex)
+                && s.charAt(secondMismatchIndex) == goal.charAt(firstMismatchIndex);
+    }
+
+    public static void main(String[] args) {
+        String s = "ab";
+        String goal = "ba";
+        boolean result = canSwapStrings(s, goal);
+
+        System.out.println("Can swap strings? " + result);
+    }
+}
