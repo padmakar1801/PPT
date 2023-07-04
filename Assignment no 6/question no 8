@@ -1,0 +1,71 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class SparseMatrixMultiplication {
+
+    public static int[][] multiplySparseMatrices(int[][] mat1, int[][] mat2) {
+        int m = mat1.length;
+        int k = mat1[0].length;
+        int n = mat2[0].length;
+
+        int[][] result = new int[m][n];
+
+        // Create maps to store non-zero elements of mat1 and mat2
+        Map<Integer, Integer>[] sparse1 = new HashMap[m];
+        Map<Integer, Integer>[] sparse2 = new HashMap[k];
+
+        // Initialize maps
+        for (int i = 0; i < m; i++) {
+            sparse1[i] = new HashMap<>();
+        }
+
+        for (int i = 0; i < k; i++) {
+            sparse2[i] = new HashMap<>();
+        }
+
+        // Store non-zero elements of mat1 in the map
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < k; j++) {
+                if (mat1[i][j] != 0) {
+                    sparse1[i].put(j, mat1[i][j]);
+                }
+            }
+        }
+
+        // Store non-zero elements of mat2 in the map
+        for (int i = 0; i < k; i++) {
+            for (int j = 0; j < n; j++) {
+                if (mat2[i][j] != 0) {
+                    sparse2[i].put(j, mat2[i][j]);
+                }
+            }
+        }
+
+        // Perform multiplication only for non-zero elements
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                for (int p = 0; p < k; p++) {
+                    if (sparse1[i].containsKey(p) && sparse2[p].containsKey(j)) {
+                        result[i][j] += sparse1[i].get(p) * sparse2[p].get(j);
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int[][] mat1 = {{1, 0, 0}, {-1, 0, 3}};
+        int[][] mat2 = {{7, 0, 0}, {0, 0, 0}, {0, 0, 1}};
+        int[][] result = multiplySparseMatrices(mat1, mat2);
+
+        // Print the result
+        for (int i = 0; i < result.length; i++) {
+            for (int j = 0; j < result[0].length; j++) {
+                System.out.print(result[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
