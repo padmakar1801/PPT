@@ -1,0 +1,28 @@
+public class BackspaceStringCompare {
+    public static boolean backspaceCompare(String s, String t) {
+        String sProcessed = processString(s);
+        String tProcessed = processString(t);
+        return sProcessed.equals(tProcessed);
+    }
+
+    private static String processString(String str) {
+        StringBuilder processed = new StringBuilder();
+
+        for (char ch : str.toCharArray()) {
+            if (ch != '#') {
+                processed.append(ch);
+            } else if (processed.length() > 0) {
+                processed.deleteCharAt(processed.length() - 1);
+            }
+        }
+
+        return processed.toString();
+    }
+
+    public static void main(String[] args) {
+        String s = "ab#c";
+        String t = "ad#c";
+        System.out.println(backspaceCompare(s, t));  // Output: true
+    }
+}
+
