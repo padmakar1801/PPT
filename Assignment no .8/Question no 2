@@ -1,0 +1,44 @@
+import java.util.Stack;
+
+public class ValidParenthesisString {
+    public static boolean checkValidString(String s) {
+        Stack<Integer> stack = new Stack<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (ch == '(' || ch == '*') {
+                stack.push(i);
+            } else if (ch == ')') {
+                if (!stack.isEmpty()) {
+                    stack.pop();
+                } else {
+                    return false;
+                }
+            }
+        }
+
+        while (!stack.isEmpty()) {
+            int index = stack.pop();
+            char ch = s.charAt(index);
+            if (ch == '(') {
+                boolean isMatched = false;
+                for (int i = index + 1; i < s.length(); i++) {
+                    if (s.charAt(i) == '*') {
+                        isMatched = true;
+                        break;
+                    }
+                }
+                if (!isMatched) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+        String s = "()";
+        System.out.println(checkValidString(s));  // Output: true
+    }
+}
