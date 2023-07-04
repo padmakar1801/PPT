@@ -1,0 +1,60 @@
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode(int val) {
+        this.val = val;
+    }
+}
+
+public class ConstructBinaryTreeFromString {
+    public static TreeNode constructTree(String s, int start, int end) {
+        if (start > end) {
+            return null;
+        }
+
+        int pos = s.indexOf("(", start);
+        if (pos == -1 || pos > end) {
+            int value = Integer.parseInt(s.substring(start, end + 1));
+            return new TreeNode(value);
+        }
+
+        int corresponding = findCorrespondingParenthesis(s, pos);
+
+        int value = Integer.parseInt(s.substring(start, pos));
+        TreeNode root = new TreeNode(value);
+        root.left = constructTree(s, pos + 1, corresponding - 1);
+        root.right = constructTree(s, corresponding + 2, end - 1);
+
+        return root;
+    }
+
+    private static int findCorrespondingParenthesis(String s, int pos) {
+        int count = 0;
+        for (int i = pos; i < s.length(); i++) {
+            if (s.charAt(i) == '(') {
+                count++;
+            } else if (s.charAt(i) == ')') {
+                count--;
+                if (count == 0) {
+                    return i;
+                }
+            }
+        }
+        return -1;
+    }
+
+    public static void inorderTraversal(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        inorderTraversal(root.left);
+        System.out.print(root.val + " ");
+        inorderTraversal(root.right);
+    }
+
+    public static void main(String[] args) {
+        String s = "4(2(3)(1))(6(5))";
+        TreeNode root = constructTree(s, 0, s.length() - 1);
+        inorderTraversal(root);
