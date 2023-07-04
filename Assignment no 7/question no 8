@@ -1,0 +1,30 @@
+public class StraightLine {
+    public static boolean checkStraightLine(int[][] coordinates) {
+        if (coordinates.length <= 2) {
+            return true;
+        }
+
+        int[] x1 = coordinates[0];
+        int[] x2 = coordinates[1];
+        double slope = (double) (x2[1] - x1[1]) / (x2[0] - x1[0]);
+
+        for (int i = 2; i < coordinates.length; i++) {
+            int[] x3 = coordinates[i];
+            double currSlope = (double) (x3[1] - x2[1]) / (x3[0] - x2[0]);
+
+            if (currSlope != slope) {
+                return false;
+            }
+
+            x1 = x2;
+            x2 = x3;
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int[][] coordinates = {{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}};
+        System.out.println(checkStraightLine(coordinates));  // Output: true
+    }
+}
