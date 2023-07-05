@@ -1,0 +1,15 @@
+JIT stands for Just-In-Time. In the context of programming languages, a JIT compiler, or Just-In-Time compiler, is a type of compiler that dynamically compiles and optimizes code at runtime, on-the-fly, as the program is executing. 
+
+Here's how a JIT compiler works:
+
+1. Interpretation: Initially, when a program is executed, an interpreter reads and executes the program's instructions line by line. This allows for easy interpretation and execution, but it can be relatively slower compared to direct machine code execution.
+
+2. Profiling: As the program runs, the JIT compiler observes the execution patterns and collects profiling data, such as the frequency of method invocations, loop iterations, and types of data being used. This profiling information helps the JIT compiler make informed optimization decisions.
+
+3. Compilation: Based on the profiling data, the JIT compiler identifies portions of the code that are frequently executed or performance-critical. It then selectively compiles these portions of the code into machine code, targeting the specific hardware architecture on which the program is running. The compiled code is typically stored in a cache for future use.
+
+4. Optimization: During the compilation process, the JIT compiler applies various optimization techniques to improve the performance of the compiled code. These optimizations can include inlining of method calls, removal of redundant checks, loop unrolling, and other transformations that aim to make the code more efficient.
+
+5. Execution: Once the JIT compiler has compiled and optimized a section of code, it replaces the interpreted code with the compiled machine code. Subsequent executions of the same code path can then directly use the compiled code, resulting in faster execution.
+
+The use of a JIT compiler combines the advantages of both interpretation and compilation. It allows for the flexibility and portability of interpreted languages while providing performance improvements similar to compiled languages. By dynamically compiling and optimizing code based on runtime information, a JIT compiler can adapt to the program's execution behavior and provide efficient execution.
