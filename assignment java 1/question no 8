@@ -1,0 +1,27 @@
+Java provides several built-in data types that are used to define variables and specify the type of data that can be stored in them. The data types in Java can be classified into the following categories:
+
+1. Primitive Data Types:
+   - `byte`: Represents a signed 8-bit integer.
+   - `short`: Represents a signed 16-bit integer.
+   - `int`: Represents a signed 32-bit integer.
+   - `long`: Represents a signed 64-bit integer.
+   - `float`: Represents a 32-bit floating-point number.
+   - `double`: Represents a 64-bit floating-point number.
+   - `boolean`: Represents a boolean value (`true` or `false`).
+   - `char`: Represents a single Unicode character.
+
+2. Reference/Object Data Types:
+   - `String`: Represents a sequence of characters.
+   - Classes and custom-defined types: User-defined classes and classes provided by Java libraries.
+
+3. Array Data Types:
+   - Arrays: Represent a collection of elements of the same type, such as `int[]`, `double[]`, or `String[]`.
+
+4. Null Type:
+   - `null`: Represents a variable that has no value assigned to it.
+
+These data types are used to declare variables, specify method return types, define method parameters, and store data within a program. Each data type has specific characteristics, size in memory, and supported operations.
+
+Java is a statically-typed language, which means that variables must be declared with their data types before they can be used. Additionally, Java supports type inference from Java 10 onwards, allowing the compiler to automatically infer the data type of a variable based on its assigned value.
+
+In addition to the built-in data types, Java also provides wrapper classes (e.g., `Integer`, `Double`, `Boolean`) that wrap the primitive types to provide additional functionality and allow them to be used in object-oriented contexts.
