@@ -1,0 +1,25 @@
+The JVM (Java Virtual Machine) is a key component of the Java platform, responsible for executing Java bytecode. It provides a runtime environment that abstracts the underlying hardware and operating system, allowing Java programs to be executed in a platform-independent manner. The architecture of the JVM can be divided into the following major components:
+
+1. Class Loader:
+   The Class Loader subsystem is responsible for loading classes into the JVM. It is responsible for finding and loading the necessary class files from the file system, network, or other sources. The class loader performs bytecode verification to ensure the integrity and security of the loaded classes.
+
+2. Runtime Data Areas:
+   The JVM manages various runtime data areas, each serving a specific purpose:
+   - Method Area: It stores class-level structures such as the runtime constant pool, field and method data, and static variables.
+   - Heap: It is the runtime data area used for dynamic memory allocation. It stores objects and arrays, and memory is automatically managed through garbage collection.
+   - Java Stack: Each thread in the JVM has its own stack, which stores method frames containing local variables, method parameters, and operand stacks.
+   - PC Registers: The Program Counter (PC) registers contain the address of the currently executing JVM instruction for each thread.
+   - Native Method Stack: It is used for executing native (non-Java) methods and is separate from the Java stack.
+
+3. Execution Engine:
+   The Execution Engine is responsible for executing the Java bytecode. It consists of two main components:
+   - Interpreter: It interprets the bytecode instructions one by one and executes them. While the interpreter provides portability and simplicity, it can be relatively slower.
+   - Just-In-Time (JIT) Compiler: The JIT compiler dynamically compiles frequently executed bytecode sections into native machine code for improved performance. The compiled code is then cached for reuse.
+
+4. Garbage Collector:
+   The Garbage Collector manages the automatic memory allocation and deallocation of objects in the heap. It identifies and frees memory that is no longer in use, reclaiming it for future allocation. Different garbage collection algorithms and techniques are employed to balance memory usage and application performance.
+
+5. Native Method Interface (JNI):
+   The JNI enables Java code to interact with native code written in other programming languages, such as C or C++. It provides a bridge between the Java runtime and native libraries, allowing Java programs to access system resources and perform operations not directly supported by the Java language.
+
+The JVM architecture provides a platform-independent execution environment for Java programs. It abstracts the complexities of the underlying hardware and operating system, ensuring consistent behavior and allowing Java programs to run on different platforms without modification.
