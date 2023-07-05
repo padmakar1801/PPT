@@ -1,0 +1,21 @@
+The JVM (Java Virtual Machine) allocates memory for different purposes during the execution of a Java program. The memory areas allocated by the JVM can be categorized into the following main types:
+
+1. Heap Memory:
+   The heap is a memory area used for dynamic memory allocation. Objects and arrays are allocated on the heap, and memory is automatically allocated and deallocated by the JVM using garbage collection. The heap is shared among all threads in a Java application.
+
+2. Stack Memory:
+   The stack is a memory area used for storing local variables, method parameters, and method call information. Each thread in a Java application has its own stack memory, which is used for method invocations and local variable storage. The memory in the stack is allocated and deallocated automatically as method calls are made and returned.
+
+3. Method Area (Non-Heap Memory):
+   The method area, also known as the non-heap memory or the permanent generation (in older versions of Java), stores class-level structures such as the class bytecode, constant pool, method and field information, and static variables. It is shared among all threads and is used to store metadata about the classes and methods loaded by the JVM.
+
+4. PC Registers:
+   The program counter (PC) registers are used to store the address of the currently executing JVM instruction. Each thread has its own PC register, and it keeps track of the current position in the bytecode of the method being executed.
+
+5. Native Method Stacks:
+   The native method stack is used for executing native (non-Java) methods, which are written in languages other than Java (such as C or C++). It is separate from the Java stack and is used to support native method invocations.
+
+6. Runtime Constant Pool:
+   The runtime constant pool is a per-class data structure that contains symbolic references to constants, field names, method names, and other symbolic information. It is part of the method area and is used for dynamic linking and resolution of references at runtime.
+
+It's important to note that the memory organization and terminology may vary between different JVM implementations. The above memory areas are based on the typical memory organization of a standard JVM.
