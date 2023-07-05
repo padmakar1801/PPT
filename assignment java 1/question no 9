@@ -1,0 +1,13 @@
+Naming Rules:
+
+Identifiers must start with a letter (a to z or A to Z), the underscore (_) character, or the dollar sign ($) character. The dollar sign is typically used in generated code or certain special cases.
+After the initial character, identifiers can contain letters, digits (0 to 9), underscores, or dollar signs.
+Identifiers are case-sensitive, so "myVariable" and "myvariable" would be treated as different identifiers.
+Naming Conventions:
+While not mandatory, following common naming conventions helps make code more readable and maintainable. These conventions include:
+
+Class and Interface Names: Start with an uppercase letter, and each word in the name begins with an uppercase letter (e.g., MyClass, MyInterface).
+Variable and Method Names: Start with a lowercase letter, and subsequent words are typically in camel case (e.g., myVariable, calculateSomething()).
+Constant Names: All uppercase letters, with words separated by underscores (e.g., MY_CONSTANT).
+Reserved Keywords:
+Java has a set of reserved keywords that cannot be used as identifiers because they have special meanings in the language. Examples of reserved keywords include public, class, static, if, for, and return, among others.
