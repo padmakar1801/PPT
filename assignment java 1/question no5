@@ -1,0 +1,14 @@
+
+1. Public:
+   The `public` access specifier is the most permissive. It allows unrestricted access to a class, method, variable, or constructor from anywhere within the program, including other packages.
+
+2. Protected:
+   The `protected` access specifier allows access within the same package, as well as in subclasses (even if they are in different packages). It restricts access from unrelated classes outside the package.
+
+3. Default (Package-private):
+   If no access specifier is specified, the default access is applied. It allows access within the same package but restricts access from classes in other packages.
+
+4. Private:
+   The `private` access specifier is the most restrictive. It limits access to the specific class in which the private member is declared. Private methods, variables, and nested classes are not accessible from any other class, even within the same package.
+
+
