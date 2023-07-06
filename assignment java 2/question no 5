@@ -1,0 +1,33 @@
+The syntax of the if-else statement in Java is as follows:
+
+```java
+if (condition) {
+    // Code to execute if the condition is true
+} else {
+    // Code to execute if the condition is false
+}
+```
+
+Here's an explanation of the different parts of the syntax:
+
+1. `if`: The keyword `if` starts the conditional statement.
+
+2. `condition`: This is the expression or condition that is evaluated. If the condition evaluates to `true`, the code inside the `if` block will be executed. If the condition evaluates to `false`, the code inside the `else` block (if present) will be executed.
+
+3. `{}`: The curly braces represent the code block associated with the `if` and `else` statements. You can enclose multiple statements or a single statement within the curly braces.
+
+4. `else` (optional): The `else` keyword introduces the block of code that will be executed when the condition in the `if` statement evaluates to `false`. It provides an alternative path of execution.
+
+Here's an example to demonstrate the syntax of the if-else statement:
+
+```java
+int age = 20;
+
+if (age >= 18) {
+    System.out.println("You are an adult.");
+} else {
+    System.out.println("You are not an adult.");
+}
+```
+
+In this example, if the `age` is greater than or equal to 18, the condition in the `if` statement evaluates to `true`, and the code inside the corresponding block is executed. Otherwise, if the condition is `false`, the code inside the `else` block is executed.
