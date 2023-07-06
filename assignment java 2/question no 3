@@ -1,0 +1,2 @@
+The switch statement in Java is used for multi-way branching, allowing you to test the value of an expression against a list of possible values. It provides an alternative to using multiple if-else statements when you have a specific set of values to compare.
+
