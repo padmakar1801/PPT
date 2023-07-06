@@ -1,0 +1,40 @@
+Certainly! Here's a Java program that sorts a string alphabetically using the `Arrays.sort()` method:
+
+```java
+import java.util.Arrays;
+
+public class AlphabeticalSort {
+    public static void main(String[] args) {
+        String inputString = "OpenAI";
+        
+        // Convert the string to character array
+        char[] charArray = inputString.toCharArray();
+        
+        // Sort the character array alphabetically
+        Arrays.sort(charArray);
+        
+        // Create a new string from the sorted character array
+        String sortedString = new String(charArray);
+        
+        // Print the sorted string
+        System.out.println("Sorted String: " + sortedString);
+    }
+}
+```
+
+In this program, we start with the input string "OpenAI". Here's a step-by-step explanation of the code:
+
+1. We convert the input string to a character array using the `toCharArray()` method.
+
+2. Next, we use `Arrays.sort()` to sort the character array in ascending order.
+
+3. After the sorting is complete, we create a new string `sortedString` from the sorted character array using the `String` constructor.
+
+4. Finally, we print the sorted string using `System.out.println()`.
+
+Output:
+```
+Sorted String: AIOeNnP
+```
+
+The program sorts the input string "OpenAI" alphabetically, resulting in the sorted string "AIOeNnP".
