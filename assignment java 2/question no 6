@@ -1,0 +1,52 @@
+In Java, you can compare two strings using the following methods:
+
+1. `equals()` method:
+   The `equals()` method is used to compare the content of two strings for equality. It checks if the characters in both strings are exactly the same.
+
+   Example:
+   ```java
+   String str1 = "Hello";
+   String str2 = "Hello";
+
+   if (str1.equals(str2)) {
+       System.out.println("The strings are equal.");
+   } else {
+       System.out.println("The strings are not equal.");
+   }
+   ```
+
+2. `equalsIgnoreCase()` method:
+   The `equalsIgnoreCase()` method is similar to `equals()`, but it performs a case-insensitive comparison. It ignores the difference between uppercase and lowercase characters.
+
+   Example:
+   ```java
+   String str1 = "hello";
+   String str2 = "HELLO";
+
+   if (str1.equalsIgnoreCase(str2)) {
+       System.out.println("The strings are equal.");
+   } else {
+       System.out.println("The strings are not equal.");
+   }
+   ```
+
+3. `compareTo()` method:
+   The `compareTo()` method compares two strings lexicographically (i.e., based on their dictionary order). It returns an integer value indicating the relationship between the two strings.
+
+   Example:
+   ```java
+   String str1 = "apple";
+   String str2 = "banana";
+
+   int result = str1.compareTo(str2);
+
+   if (result < 0) {
+       System.out.println("str1 comes before str2.");
+   } else if (result > 0) {
+       System.out.println("str1 comes after str2.");
+   } else {
+       System.out.println("str1 and str2 are equal.");
+   }
+   ```
+
+These methods provide different ways to compare strings in Java, allowing you to check for equality, ignore case, or determine their relative order in lexicographical sorting. Choose the appropriate method based on your specific comparison requirements.
