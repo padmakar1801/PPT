@@ -1,0 +1,35 @@
+In Java, strings are immutable by default, which means their values cannot be changed once they are created. However, there is a mutable alternative to strings called `StringBuilder` or `StringBuffer` classes. These classes allow you to modify the contents of a string without creating a new object every time.
+
+Here's an example that demonstrates the use of `StringBuilder`, a mutable string class in Java:
+
+```java
+StringBuilder mutableString = new StringBuilder("Hello");
+
+// Append additional text to the string
+mutableString.append(" World!");
+
+// Replace a portion of the string
+mutableString.replace(6, 11, "There");
+
+// Delete a portion of the string
+mutableString.delete(0, 5);
+
+System.out.println(mutableString.toString());
+```
+
+In this example, we create a `StringBuilder` object named `mutableString` with the initial value "Hello". We then demonstrate some of the mutable operations you can perform:
+
+1. `append()`: This method adds the specified text to the end of the existing string.
+
+2. `replace()`: This method replaces the characters in the specified range with the provided text.
+
+3. `delete()`: This method removes the characters in the specified range from the string.
+
+Finally, we convert the `StringBuilder` object back to a regular string using the `toString()` method and print the result.
+
+Output:
+```
+There World!
+```
+
+The use of mutable strings like `StringBuilder` or `StringBuffer` is preferred in scenarios where frequent modifications are required, as they avoid the creation of new string objects each time a change is made. This can be more efficient and memory-friendly, especially when dealing with large or repetitive string operations.
