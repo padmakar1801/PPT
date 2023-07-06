@@ -1,0 +1,61 @@
+Conditional statements in Java allow you to control the flow of your program based on certain conditions. They enable you to execute different blocks of code depending on whether a condition is true or false. The main conditional statements in Java are:
+
+1. if Statement:
+   The `if` statement is the most basic conditional statement. It evaluates a condition and executes a block of code if the condition is true. It can also be followed by an optional `else` statement to specify a block of code to execute when the condition is false.
+
+   Example:
+   ```java
+   int age = 25;
+
+   if (age >= 18) {
+       System.out.println("You are an adult.");
+   } else {
+       System.out.println("You are not an adult.");
+   }
+   ```
+
+2. else-if Statement:
+   The `else-if` statement allows you to test multiple conditions sequentially. It is used when you have more than two possible outcomes. The conditions are evaluated one by one, and the block associated with the first true condition is executed.
+
+   Example:
+   ```java
+   int score = 80;
+
+   if (score >= 90) {
+       System.out.println("You got an A!");
+   } else if (score >= 80) {
+       System.out.println("You got a B.");
+   } else if (score >= 70) {
+       System.out.println("You got a C.");
+   } else {
+       System.out.println("You need to improve your score.");
+   }
+   ```
+
+3. switch Statement:
+   The `switch` statement allows you to test the value of an expression against a list of cases. It provides a concise way to handle multiple conditions. Each case represents a possible value, and the corresponding block of code is executed if the value matches.
+
+   Example:
+   ```java
+   int dayOfWeek = 2;
+   String dayName;
+
+   switch (dayOfWeek) {
+       case 1:
+           dayName = "Monday";
+           break;
+       case 2:
+           dayName = "Tuesday";
+           break;
+       case 3:
+           dayName = "Wednesday";
+           break;
+       default:
+           dayName = "Invalid day";
+           break;
+   }
+
+   System.out.println("Today is " + dayName);
+   ```
+
+The use of conditional statements in Java allows you to control the program's behavior based on different conditions or criteria. They are vital for implementing decision-making logic and allow your program to be more flexible and responsive to different scenarios. Whether it's executing specific code blocks, choosing different paths, or handling multiple cases, conditional statements help you achieve dynamic and controlled program execution.
