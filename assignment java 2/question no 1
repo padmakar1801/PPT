@@ -1,0 +1,18 @@
+
+1. Equality Operators:
+   - `==` (Equal to): Checks if two operands are equal in value.
+   - `!=` (Not equal to): Checks if two operands are not equal in value.
+
+2. Relational Operators:
+   - `<` (Less than): Checks if the left operand is less than the right operand.
+   - `>` (Greater than): Checks if the left operand is greater than the right operand.
+   - `<=` (Less than or equal to): Checks if the left operand is less than or equal to the right operand.
+   - `>=` (Greater than or equal to): Checks if the left operand is greater than or equal to the right operand.
+
+3. Conditional Logical Operators:
+   - `&&` (Logical AND): Returns true if both the left and right operands are true.
+   - `||` (Logical OR): Returns true if either the left or right operand is true.
+
+4. Ternary Operator:
+   - `? :` (Conditional operator): Evaluates a condition and returns one of two expressions based on the result of the condition. It has the form `condition ? expression1 : expression2`. If the condition is true, `expression1` is evaluated; otherwise, `expression2` is evaluated.
+
