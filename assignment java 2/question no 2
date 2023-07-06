@@ -1,0 +1,14 @@
+Based on the number of operands they operate on, operators in Java can be categorized into the following types:
+
+1. Unary Operators:
+   Unary operators work with a single operand. They perform operations on the operand and return a result.
+   - Example: `!` (logical complement), `-` (unary minus), `++` (increment), `--` (decrement).
+
+2. Binary Operators:
+   Binary operators work with two operands. They perform operations on the operands and return a result.
+   - Example: `+` (addition), `-` (subtraction), `*` (multiplication), `/` (division), `%` (modulo), `==` (equality), `!=` (inequality).
+
+3. Ternary Operator:
+   The ternary operator, `? :`, is the only operator in Java that takes three operands. It evaluates a condition and returns one of two expressions based on the result of the condition.
+
+These categories define how many operands an operator expects to work with. Unary operators work with one operand, binary operators work with two operands, and the ternary operator works with three operands.
