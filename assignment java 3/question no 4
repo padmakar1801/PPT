@@ -1,0 +1,18 @@
+public class PolymorphismExample {
+    public void display(String message) {
+        System.out.println("Displaying message: " + message);
+    }
+
+    public void display(String message, int times) {
+        for (int i = 0; i < times; i++) {
+            System.out.println("Displaying message: " + message);
+        }
+    }
+
+    public static void main(String[] args) {
+        PolymorphismExample example = new PolymorphismExample();
+        
+        example.display("Hello"); // Invokes the first display() method
+        example.display("Hi", 3); // Invokes the second display() method
+    }
+}
