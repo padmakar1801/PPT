@@ -1,0 +1,26 @@
+class Vehicle {
+    public void drive() {
+        System.out.println("Driving a vehicle...");
+    }
+}
+
+class Car extends Vehicle {
+    @Override
+    public void drive() {
+        System.out.println("Driving a car...");
+    }
+}
+
+public class InheritanceExample {
+    public static void main(String[] args) {
+        Vehicle vehicle = new Vehicle();
+        vehicle.drive(); // Output: Driving a vehicle...
+
+        Car car = new Car();
+        car.drive(); // Output: Driving a car...
+
+        // Polymorphic behavior
+        Vehicle polymorphicVehicle = new Car();
+        polymorphicVehicle.drive(); // Output: Driving a car...
+    }
+}
