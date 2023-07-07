@@ -1,0 +1,22 @@
+In Java, the `final` keyword has multiple uses. When applied to a class, it denotes that the class cannot be subclassed or inherited by other classes. A final class is considered the end of the inheritance hierarchy and cannot be extended further.
+
+Here are some key points about final classes in Java:
+
+1. Final Class Declaration: To declare a class as final, the `final` keyword is used before the class declaration. For example:
+   ```java
+   final class FinalClass {
+       // Class members and methods
+   }
+   ```
+
+2. Inheritance Restriction: A final class cannot be subclassed. It prevents other classes from inheriting or extending the final class. If you try to extend a final class, the compiler will generate an error.
+
+3. Method Overriding Restriction: Final classes typically contain final methods, which cannot be overridden by subclasses. However, it's important to note that a final class can still inherit and override non-final methods from its parent classes.
+
+4. Optimization and Security: Marking a class as final provides certain optimizations for the Java compiler and runtime environment. It allows the compiler to inline methods, apply optimizations, and improve performance. Additionally, final classes can provide increased security by preventing unintended modifications or extensions.
+
+5. Immutable Classes: Final classes are often used to create immutable objects in Java. By making a class final, its internal state cannot be modified, ensuring the immutability of objects.
+
+Final classes are useful in scenarios where you want to ensure that a class cannot be extended or modified. They provide a level of control over the class hierarchy and can be employed for performance optimizations, security considerations, or to enforce immutability.
+
+It's worth noting that while a class can be marked as final, its members (fields or methods) may or may not be declared as final independently. Declaring members as final imposes additional restrictions, such as making them unmodifiable or unchangeable once initialized.
