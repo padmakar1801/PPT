@@ -1,0 +1,37 @@
+In Java, `throw` and `throws` are two keywords used in exception handling, but they serve different purposes:
+
+1. `throw`:
+   - The `throw` keyword is used to explicitly throw an exception. It is followed by an instance of an exception or a subclass of `Throwable`.
+   - When you encounter an exceptional condition or error in your code that cannot be handled locally, you can use `throw` to indicate that an exception has occurred and interrupt the normal flow of execution.
+   - The `throw` statement is typically used within methods to raise an exception explicitly, and it transfers control to the nearest enclosing `try-catch` block or an appropriate exception handler.
+
+2. `throws`:
+   - The `throws` keyword is used in the method declaration to specify that the method might throw one or more types of exceptions. It lists the exception types that the method can potentially throw.
+   - When a method includes a `throws` clause, it signals to the caller of the method that it should handle or propagate the listed exceptions.
+   - When a method declares that it `throws` a particular exception, it is indicating that it is not responsible for handling that exception itself and expects the caller to handle it appropriately.
+
+Here's a summary of the differences between `throw` and `throws`:
+
+- `throw` is used to explicitly throw an exception within a method, interrupting the normal flow of execution.
+- `throws` is used in the method declaration to specify the exception types that the method might throw, indicating that the method is not responsible for handling those exceptions.
+
+Here's an example that illustrates the usage of `throw` and `throws`:
+
+```java
+public void throwException() {
+    throw new RuntimeException("This is an exception thrown with throw");
+}
+
+public void methodWithThrows() throws IOException {
+    if (someCondition) {
+        throw new IOException("This is an exception thrown with throw");
+    }
+}
+```
+
+In the example, the `throwException()` method uses `throw` to explicitly throw a `RuntimeException`.
+
+The `methodWithThrows()` method includes a `throws` clause in its declaration, indicating that it might throw an `IOException`. It expects the caller of this method to handle or propagate the `IOException`.
+
+It's important to handle or propagate exceptions correctly using `try-catch` blocks or specifying `throws` in method signatures to ensure proper exception handling and program stability.
+
