@@ -1,0 +1,38 @@
+In Java 8, lambda expressions were introduced as a new feature to provide a concise and functional way of writing code. A lambda expression is essentially an anonymous function that can be used as a method parameter or assigned to a functional interface.
+
+Here's the general syntax of a lambda expression in Java:
+
+```
+(parameters) -> { body }
+```
+
+The lambda expression consists of the following components:
+
+1. Parameters: The parameters represent the input to the lambda expression. They can be empty or include one or more parameters, separated by commas. The parameter types can be explicitly declared or inferred by the compiler.
+
+2. Arrow Operator: The arrow operator `->` separates the parameter list from the body of the lambda expression.
+
+3. Body: The body of the lambda expression contains the code to be executed. It can be a single expression or a block of statements enclosed in curly braces. If the body consists of a single expression, the return value is automatically inferred. If the body is a block of statements, explicit return statements may be required.
+
+Lambda expressions are typically used in combination with functional interfaces, which are interfaces that have a single abstract method. The lambda expression provides a concise way of implementing the abstract method of the functional interface.
+
+Here's an example that demonstrates the usage of a lambda expression:
+
+```java
+interface Calculator {
+    int calculate(int a, int b);
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator addition = (a, b) -> a + b;
+        int result = addition.calculate(5, 3);
+        System.out.println("Addition Result: " + result); // Output: 8
+    }
+}
+```
+
+In this example, we define a functional interface called `Calculator` with a single abstract method `calculate()`. We then use a lambda expression to implement the `calculate()` method. The lambda expression `(a, b) -> a + b` takes two integer parameters `a` and `b` and returns their sum. We assign this lambda expression to an instance of the `Calculator` interface and use it to perform addition.
+
+Lambda expressions simplify the code by providing a concise way to implement functional interfaces, eliminating the need for anonymous inner classes in many cases. They promote functional programming paradigms and enable more expressive and readable code.
+
