@@ -1,0 +1,15 @@
+In Java 8, a functional interface is an interface that has only one abstract method. It is designed to be used with lambda expressions or method references, providing a way to implement functional programming concepts in Java.
+
+Functional interfaces serve as the foundation for lambda expressions and method references, allowing developers to write more concise and expressive code.
+
+Java 8 introduced the `@FunctionalInterface` annotation, which can be used to mark an interface as a functional interface. While it is not strictly required to use this annotation, it helps enforce the single abstract method requirement and provides clarity to other developers.
+
+Here's an example of a functional interface:
+
+```java
+@FunctionalInterface
+interface Calculator {
+    int calculate(int a, int b);
+}
+```
+
