@@ -1,0 +1,26 @@
+In Java, exceptions and errors are both subclasses of the `Throwable` class, but they serve different purposes and have different implications in the context of exception handling. Additionally, exceptions are further categorized into checked and unchecked exceptions based on their handling requirements.
+
+Here are the key differences between checked exceptions, unchecked exceptions, and errors:
+
+1. Checked Exceptions:
+   - Checked exceptions are exceptions that are checked at compile-time, meaning the compiler enforces handling or declaring them using `try-catch` blocks or declaring them in the method signature with the `throws` keyword.
+   - Checked exceptions are typically used to represent recoverable exceptional conditions that a program may encounter during execution, such as I/O errors, network issues, or database access problems.
+   - Examples of checked exceptions in Java include `IOException`, `SQLException`, and `ClassNotFoundException`.
+   - The handling of checked exceptions ensures that the program is aware of and handles potential exceptional conditions, promoting code robustness and reliability.
+
+2. Unchecked Exceptions:
+   - Unchecked exceptions, also known as runtime exceptions, are exceptions that are not checked at compile-time, meaning they do not require explicit handling or declaring.
+   - Unchecked exceptions are typically used to represent programming errors or logical errors that are not easily recoverable, such as null pointer exceptions, array index out of bounds, or illegal argument errors.
+   - Examples of unchecked exceptions in Java include `NullPointerException`, `ArrayIndexOutOfBoundsException`, and `IllegalArgumentException`.
+   - Unchecked exceptions are intended to be caught and fixed during the development and testing stages of a program. They indicate bugs or issues in the code that need to be resolved to ensure proper program execution.
+
+3. Errors:
+   - Errors represent serious and unrecoverable conditions that usually indicate severe issues in the JVM or the environment in which the application is running. Errors are typically beyond the control of the programmer.
+   - Examples of errors in Java include `OutOfMemoryError`, `StackOverflowError`, and `VirtualMachineError`.
+   - Errors are typically not caught or handled explicitly by the application code. They are meant to indicate fatal errors that require the termination of the program.
+   - Errors are usually caused by issues like insufficient system resources, hardware failures, or JVM malfunctions. They often indicate problems that cannot be resolved programmatically.
+
+
+
+
+
