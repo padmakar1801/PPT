@@ -1,0 +1,16 @@
+No, it is not mandatory for a lambda expression to have parameters. Lambda expressions can have empty parameter lists when they do not require any input.
+
+Here's an example of a lambda expression without parameters:
+
+```java
+Runnable runnable = () -> {
+    System.out.println("This is a lambda expression without parameters");
+};
+```
+
+In this example, we declare a lambda expression using the `Runnable` functional interface. The lambda expression has an empty parameter list `()` and the body of the lambda expression is enclosed in curly braces `{}`. The body consists of a single statement that prints a message to the console.
+
+Lambda expressions without parameters are useful when you want to express behavior that does not depend on any input. They can be used to define simple tasks or actions that need to be executed.
+
+It's important to note that even when a lambda expression does not have parameters, the empty parentheses `()` must still be included in the lambda expression syntax.
+
