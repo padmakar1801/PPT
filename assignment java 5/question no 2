@@ -1,0 +1,2 @@
+Exception handling is a mechanism in Java that allows you to deal with exceptional or error conditions that may occur during the execution of a program. It provides a structured way to handle and recover from unexpected situations, preventing the program from terminating abruptly or behaving unpredictably.
+
