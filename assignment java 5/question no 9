@@ -1,0 +1,49 @@
+In Java, there are two ways to implement threads:
+
+1. Extending the `Thread` class:
+   - One way to implement threads is by creating a subclass of the `Thread` class and overriding its `run()` method.
+   - The `run()` method contains the code that will be executed in the thread.
+   - To start the thread, you create an instance of the subclass and call the `start()` method, which internally calls the `run()` method.
+   - Here's an example:
+
+   ```java
+   class MyThread extends Thread {
+       public void run() {
+           // Code to be executed in the thread
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+           MyThread thread = new MyThread();
+           thread.start();
+       }
+   }
+   ```
+
+2. Implementing the `Runnable` interface:
+   - Another way to implement threads is by implementing the `Runnable` interface and providing the implementation for its `run()` method.
+   - The `Runnable` interface represents a task that can be executed by a thread.
+   - To start the thread, you create an instance of a class implementing `Runnable`, and then create a `Thread` object, passing the `Runnable` instance to its constructor. Finally, you call the `start()` method on the `Thread` object.
+   - Here's an example:
+
+   ```java
+   class MyRunnable implements Runnable {
+       public void run() {
+           // Code to be executed in the thread
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+           MyRunnable runnable = new MyRunnable();
+           Thread thread = new Thread(runnable);
+           thread.start();
+       }
+   }
+   ```
+
+Both approaches allow you to create and start threads, but the second approach of implementing the `Runnable` interface is generally preferred because it offers more flexibility. Implementing `Runnable` allows you to separate the task (runnable object) from the thread (thread object), promoting better separation of concerns and code reusability.
+
+It's worth noting that Java also provides higher-level concurrency utilities, such as `Executors` and `ThreadPoolExecutor`, which simplify the management of threads and provide additional features for task scheduling and thread pooling.
+
