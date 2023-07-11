@@ -1,0 +1,30 @@
+class CustomException extends Exception {
+    public CustomException(String message) {
+        super(message);
+    }
+}
+
+class MyClass {
+    public void performOperation() throws CustomException {
+        // Simulating an exceptional condition
+        boolean condition = true;
+        
+        if (condition) {
+            throw new CustomException("Custom exception occurred!");
+        } else {
+            // Perform the normal operation
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        
+        try {
+            obj.performOperation();
+        } catch (CustomException e) {
+            System.out.println("Caught custom exception: " + e.getMessage());
+        }
+    }
+}
