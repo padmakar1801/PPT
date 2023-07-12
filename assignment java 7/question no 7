@@ -1,0 +1,54 @@
+In Java servlets, the `doGet()` and `doPost()` methods are part of the HttpServlet class and are used to handle HTTP GET and POST requests, respectively. These methods are overridden in servlet classes to provide specific functionality based on the HTTP method used in the request. Here's the purpose of each method:
+
+1. doGet():
+   - The `doGet()` method is called by the servlet container when an HTTP GET request is received from a client.
+   - It handles the processing of the GET request and generates a response.
+   - Typically, the `doGet()` method is used to retrieve information from the server without modifying any data. It is considered a safe and idempotent operation.
+   - You can access query parameters, request headers, and other request information using the `HttpServletRequest` object.
+   - The `doGet()` method is often used to fetch and display data, generate HTML or XML responses, or perform any read-only operations.
+
+Example usage of `doGet()`:
+```java
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    // Retrieve request parameters
+    String parameterValue = request.getParameter("param");
+    
+    // Process the GET request and generate a response
+    // ...
+    
+    // Set the response content type and write response data
+    response.setContentType("text/html");
+    PrintWriter out = response.getWriter();
+    out.println("<html><body>");
+    out.println("Hello, this is the response from doGet()");
+    out.println("</body></html>");
+}
+```
+
+2. doPost():
+   - The `doPost()` method is called by the servlet container when an HTTP POST request is received from a client.
+   - It handles the processing of the POST request and generates a response.
+   - The `doPost()` method is typically used when the client wants to send data to the server, such as form submissions, file uploads, or any other operation that modifies server-side data.
+   - You can access form parameters, request headers, and other request information using the `HttpServletRequest` object.
+   - The `doPost()` method is often used to process and validate user input, update a database, store uploaded files, or perform any write or update operations.
+
+Example usage of `doPost()`:
+```java
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    // Retrieve form parameters
+    String username = request.getParameter("username");
+    String password = request.getParameter("password");
+    
+    // Process the POST request and generate a response
+    // ...
+    
+    // Set the response content type and write response data
+    response.setContentType("text/html");
+    PrintWriter out = response.getWriter();
+    out.println("<html><body>");
+    out.println("Hello, this is the response from doPost()");
+    out.println("</body></html>");
+}
+```
+
+In both cases, you can perform various operations based on the specific requirements of your application, such as accessing databases, performing business logic, generating dynamic content, or interacting with external services. The choice between `doGet()` and `doPost()` depends on the nature of the request and the desired functionality for handling the specific HTTP method.
