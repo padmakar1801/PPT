@@ -1,0 +1,15 @@
+LinkedHashMap is a class in Java that extends the HashMap class and implements the Map interface. It is a variation of HashMap that maintains the insertion order of its entries, making it an ordered collection of key-value pairs.
+
+In addition to the key-value mapping functionality inherited from HashMap, LinkedHashMap also maintains a doubly-linked list to preserve the order of insertion. This linked list allows for efficient iteration over the entries in the order they were added.
+
+Key features of LinkedHashMap:
+
+1. Order Preservation: LinkedHashMap maintains the order of elements based on their insertion order. When iterating over the elements, they are returned in the same order in which they were inserted.
+
+2. Performance Characteristics: LinkedHashMap offers similar performance characteristics as HashMap for basic operations such as put(), get(), and remove(). However, due to the additional linked list structure, LinkedHashMap requires slightly more memory overhead than HashMap.
+
+3. Access Order: LinkedHashMap also provides an option to maintain elements in access order, rather than insertion order. When this mode is enabled by specifying the accessOrder parameter as true in the constructor or by invoking the constructor with the accessOrder parameter, the order of elements is determined by their access history. Accessing an entry (via get() or put()) moves it to the end of the linked list, thereby changing its position in the iteration order.
+
+4. Iteration: Iterating over the elements of a LinkedHashMap is efficient and predictable. The elements are returned in the order they were inserted or accessed, depending on the chosen mode (insertion order or access order).
+
+LinkedHashMap can be useful in scenarios where maintaining the order of insertion or access is important, such as implementing a cache or when the order of elements represents a specific sequence or priority. By combining the features of a HashMap and a doubly-linked list, LinkedHashMap provides a convenient way to store key-value pairs while preserving their order.
