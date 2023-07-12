@@ -1,0 +1,21 @@
+The life cycle of a servlet in Java consists of three main phases: initialization, service, and destruction. The servlet container manages the life cycle of a servlet, creating and invoking the appropriate methods at each phase. Here's a detailed explanation of each phase:
+
+1. Initialization:
+   - When a servlet container starts or the first request for a servlet is received, the container creates an instance of the servlet by calling its constructor.
+   - After the instance is created, the container calls the `init()` method of the servlet. This method is called only once during the lifetime of the servlet and is used for initialization tasks.
+   - The `init()` method takes a `ServletConfig` object as a parameter, which provides configuration information for the servlet, such as initialization parameters defined in the deployment descriptor (web.xml) or through annotations.
+   - The `init()` method is the ideal place to perform one-time initialization tasks, such as opening database connections, loading configuration files, or initializing resources.
+
+2. Service:
+   - After the initialization phase, the servlet is ready to handle incoming requests. Whenever a client sends an HTTP request mapped to the servlet's URL pattern, the container invokes the `service()` method of the servlet.
+   - The `service()` method receives the request as an `HttpServletRequest` object and the response as an `HttpServletResponse` object.
+   - Inside the `service()` method, you can access the request parameters, headers, cookies, and other request details. You can also generate the response content and set response headers, status codes, and cookies.
+   - The `service()` method is called for each request and can handle different HTTP methods (GET, POST, etc.) based on the type of request received.
+   - By default, the `service()` method dispatches the request to the appropriate method based on the HTTP method (e.g., `doGet()`, `doPost()`, etc.). These method-specific handlers can be overridden to implement the desired functionality.
+
+3. Destruction:
+   - At some point, the servlet container may decide to shut down or unload the servlet. This can happen when the web application is stopped or undeployed, or when the container is being shut down.
+   - When the container decides to destroy the servlet, it calls the `destroy()` method of the servlet.
+   - The `destroy()` method is called only once during the lifetime of the servlet, and it allows the servlet to release any resources it acquired during initialization or service.
+   - In the `destroy()` method, you can perform cleanup tasks such as closing database connections, releasing file handles, or freeing other resources.
+
