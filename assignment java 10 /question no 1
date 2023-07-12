@@ -1,0 +1,19 @@
+The Spring MVC (Model-View-Controller) framework is a part of the larger Spring Framework that provides a robust and flexible architecture for building web applications. It follows the MVC design pattern, which helps in separating the concerns of handling user requests, processing data, and rendering views.
+
+The key components of the Spring MVC framework include:
+
+1. Model: The model represents the data and business logic of the application. It encapsulates the application's state and behavior. The model objects are typically JavaBeans or POJOs (Plain Old Java Objects) that carry data between the controller and the view.
+
+2. View: The view is responsible for rendering the presentation of the application's data. It generates the HTML, XML, or other content that is sent back to the client's web browser. The Spring MVC framework supports various view technologies, such as JSP (JavaServer Pages), Thymeleaf, Freemarker, or even JSON/XML for web services.
+
+3. Controller: The controller handles the user's requests and acts as an intermediary between the user interface and the model. It receives the user's input, interacts with the model to process the data, and determines the appropriate view to render. In Spring MVC, controllers are typically implemented as classes annotated with `@Controller` or other specialized annotations.
+
+4. DispatcherServlet: The DispatcherServlet is the front controller in the Spring MVC framework. It receives all incoming requests and acts as a central entry point. It delegates the request to the appropriate controller based on the URL mapping configured in the application. The DispatcherServlet manages the flow of the request and coordinates the execution of the different components involved.
+
+5. HandlerMapping: The HandlerMapping maps incoming requests to specific controllers based on the URL patterns defined in the configuration. It helps the DispatcherServlet identify the appropriate controller to handle the request.
+
+6. ViewResolver: The ViewResolver resolves the logical view name returned by the controller into the actual view implementation. It determines the correct view technology and generates the appropriate view for rendering.
+
+The Spring MVC framework provides features like request mapping, data binding, validation, form handling, internationalization, exception handling, and more. It emphasizes flexibility, modularity, and separation of concerns, making it suitable for developing scalable and maintainable web applications.
+
+By leveraging the Spring MVC framework, developers can benefit from the rich set of features, seamless integration with other Spring modules, and extensive community support provided by the Spring ecosystem.
