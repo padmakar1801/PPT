@@ -1,0 +1,19 @@
+The JSP (JavaServer Pages) Model-View-Controller (MVC) architecture is a design pattern that separates the different components of a web application to enhance maintainability, scalability, and reusability. It promotes the separation of concerns by dividing the application into three main components: the Model, the View, and the Controller.
+
+1. Model:
+   - The Model represents the data and business logic of the application. It encapsulates the application's state and provides methods to interact with and manipulate the data.
+   - In the JSP MVC architecture, the Model is typically implemented using Java classes, such as JavaBeans, POJOs (Plain Old Java Objects), or data access objects (DAOs). These classes are responsible for fetching and updating the data from the database, performing calculations, and enforcing business rules.
+   - The Model is independent of the View and the Controller, and it does not have any direct knowledge or dependency on them.
+
+2. View:
+   - The View represents the presentation layer of the application, responsible for displaying the user interface to the end-users.
+   - In the JSP MVC architecture, the View is typically implemented using JSP (JavaServer Pages). JSPs are used to generate dynamic HTML, XML, or other types of content that are sent back to the client's browser.
+   - The View receives data from the Model and formats it for presentation to the user. It should not contain any business logic or data manipulation. Instead, it focuses on the visual representation and user interaction aspects.
+
+3. Controller:
+   - The Controller acts as an intermediary between the Model and the View. It handles the user's requests, processes the input, and determines the appropriate actions to be taken.
+   - In the JSP MVC architecture, the Controller is often implemented using servlets. Servlets receive the user's requests, retrieve and update data from the Model, and determine the appropriate View to generate the response.
+   - The Controller coordinates the flow of control, handles request parameters, performs input validation, invokes the Model to update data, and selects the appropriate View to render the response.
+   - The Controller should be responsible for managing the application's navigation and flow, ensuring that the appropriate data is provided to the View.
+
+The JSP MVC architecture promotes separation of concerns, making the application more modular and maintainable. It allows different team members to work on different components independently, facilitates code reuse, and improves the overall structure of the application. The Model represents the data and business logic, the View handles the presentation, and the Controller manages the flow and interaction between the Model and the View.
