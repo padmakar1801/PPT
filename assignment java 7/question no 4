@@ -1,0 +1,17 @@
+In Java, a Servlet is a Java programming language class that extends the capabilities of a server. It is a server-side component that receives and responds to HTTP requests from clients, typically web browsers. Servlets are used to build dynamic web applications and provide a way to handle user requests, process data, and generate dynamic content.
+
+Key points about Servlets:
+
+1. Server-side Execution: Servlets run on the server-side and are managed by a web server or servlet container (e.g., Apache Tomcat). When a client sends an HTTP request, the servlet container invokes the appropriate servlet to handle the request and generate a response.
+
+2. HTTP Protocol Support: Servlets are primarily designed to handle HTTP requests and responses. They can process various HTTP methods like GET, POST, PUT, DELETE, etc., and access request parameters, headers, and cookies. Servlets can also set response headers, cookies, and generate dynamic HTML, XML, or other types of content.
+
+3. Lifecycle: Servlets have a well-defined lifecycle consisting of initialization, service, and destruction phases. The servlet container creates an instance of a servlet during initialization, calls the `init()` method to perform any setup tasks, and then invokes the `service()` method to handle incoming requests. Finally, when the servlet container is shutting down or unloading the servlet, it calls the `destroy()` method to release any resources.
+
+4. Multithreading: Servlets are multithreaded by nature. The servlet container creates multiple threads to handle concurrent requests. Each request is typically processed by a separate thread, allowing the servlet to handle multiple requests simultaneously.
+
+5. Persistence: Servlets are not persistent objects. They do not maintain any state between requests by default. However, they can access shared resources like databases or application-level attributes to maintain state or share data across requests.
+
+6. Deployment and Configuration: Servlets are packaged in web applications, which are typically WAR (Web Application Archive) files. Web application deployment descriptors (web.xml or annotations) define the servlet's mapping to URLs and specify configuration parameters for the servlet container.
+
+Servlets provide a powerful and flexible platform for building dynamic web applications in Java. They offer a server-side solution for handling HTTP requests and generating dynamic content. Servlets are widely used in Java-based web frameworks and are a fundamental building block for Java web development.
