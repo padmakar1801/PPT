@@ -1,0 +1,37 @@
+Hibernate framework provides several important interfaces that play a crucial role in mapping and interacting with the database. Here are some of the key interfaces in Hibernate:
+
+1. SessionFactory:
+   - The `SessionFactory` interface is a thread-safe factory for creating Hibernate `Session` objects.
+   - It is typically created once during application startup and used to obtain `Session` instances.
+   - The `SessionFactory` holds configuration settings and mappings for the Hibernate application.
+
+2. Session:
+   - The `Session` interface represents a single-threaded unit of work in Hibernate.
+   - It is used to perform database operations and interact with persistent objects.
+   - The `Session` provides CRUD (Create, Read, Update, Delete) operations, transaction management, and various querying methods.
+
+3. Transaction:
+   - The `Transaction` interface represents a database transaction in Hibernate.
+   - It provides methods to control the transaction boundaries, such as commit, rollback, and set transactional properties.
+   - Transactions ensure atomicity, consistency, isolation, and durability (ACID) properties of database operations.
+
+4. Query and Criteria:
+   - The `Query` interface allows executing HQL (Hibernate Query Language) queries against the database.
+   - It provides methods to set query parameters, specify query hints, and retrieve query results.
+   - The `Criteria` interface provides a programmatic way to create and execute queries using a type-safe and object-oriented API.
+
+5. Entity and SessionFactoryBuilder:
+   - The `Entity` interface represents a persistent entity in Hibernate, which is a Java class mapped to a database table.
+   - It provides methods to manage the entity state, perform CRUD operations, and access associated entities.
+   - The `SessionFactoryBuilder` interface is used to build a `SessionFactory` instance based on configuration settings.
+
+6. Configuration:
+   - The `Configuration` interface represents the Hibernate configuration settings.
+   - It provides methods to configure Hibernate properties, mappings, and other settings.
+   - The `Configuration` is used to build the `SessionFactory` during application startup.
+
+7. CriteriaQuery and Root:
+   - The `CriteriaQuery` interface provides a type-safe and object-oriented way to create queries using the JPA Criteria API.
+   - It allows building queries using a fluent API and supports dynamic query construction.
+   - The `Root` interface represents the entity being queried and provides access to its attributes and relationships.
+
