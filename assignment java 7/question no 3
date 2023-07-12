@@ -1,0 +1,35 @@
+In JDBC (Java Database Connectivity), there are three main types of statements that can be used to execute SQL queries and updates against a database:
+
+1. Statement:
+The `Statement` interface is the simplest type of statement in JDBC. It allows you to execute static SQL queries and updates. The SQL statements are passed directly as strings to the execute() or executeUpdate() methods of the Statement object. However, using Statement directly with concatenated SQL strings can make your code vulnerable to SQL injection attacks. Statement does not support parameterized queries.
+
+Example usage:
+```java
+Statement statement = connection.createStatement();
+ResultSet resultSet = statement.executeQuery("SELECT * FROM employees");
+```
+
+2. PreparedStatement:
+The `PreparedStatement` interface extends the Statement interface and provides a more efficient way to execute SQL queries and updates, including parameterized queries. It allows you to pre-compile an SQL statement with placeholders for input values. You can set the parameter values using setter methods, which provide type safety and automatic conversion of Java types to database-specific types. PreparedStatement helps prevent SQL injection attacks and improves performance by reusing the pre-compiled statement.
+
+Example usage:
+```java
+PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO employees (name, age) VALUES (?, ?)");
+preparedStatement.setString(1, "John Doe");
+preparedStatement.setInt(2, 30);
+int rowsAffected = preparedStatement.executeUpdate();
+```
+
+3. CallableStatement:
+The `CallableStatement` interface extends the PreparedStatement interface and is used to execute stored procedures in the database. Stored procedures are pre-compiled database programs that can take input parameters, perform specific operations, and return output parameters or result sets. CallableStatement allows you to execute stored procedures and retrieve the results.
+
+Example usage:
+```java
+CallableStatement callableStatement = connection.prepareCall("{call get_employee(?, ?)}");
+callableStatement.setInt(1, employeeId);
+callableStatement.registerOutParameter(2, Types.VARCHAR);
+callableStatement.execute();
+String employeeName = callableStatement.getString(2);
+```
+
+These three types of statements provide different levels of functionality and flexibility in executing SQL queries and updates. PreparedStatement is the most commonly used statement type due to its support for parameterized queries and improved performance. CallableStatement is used specifically for executing stored procedures. The choice of statement type depends on the specific requirements of your application and the type of SQL operation you need to perform.
