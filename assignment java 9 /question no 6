@@ -1,0 +1,47 @@
+Constructor Injection and Setter Injection are two approaches for achieving Dependency Injection in object-oriented programming. They differ in how dependencies are provided to an object. Here's a breakdown of the key differences between the two:
+
+Constructor Injection:
+- Dependencies are provided through a class's constructor.
+- The dependencies are declared as parameters in the constructor.
+- The container or client code is responsible for providing the dependencies when creating an instance of the class.
+- The dependencies are typically required and must be provided at the time of object creation.
+- Once the dependencies are injected via the constructor, they are typically immutable (i.e., their values cannot be changed).
+- Constructor Injection promotes the concept of mandatory dependencies, as they are explicitly defined in the constructor signature.
+- Constructor Injection ensures that the object is fully initialized with its dependencies at the time of creation.
+
+Example of Constructor Injection in Java:
+```java
+public class MyClass {
+    private final Dependency dependency;
+
+    public MyClass(Dependency dependency) {
+        this.dependency = dependency;
+    }
+}
+```
+
+Setter Injection:
+- Dependencies are provided through setter methods (or sometimes referred to as "property" methods).
+- The object exposes setter methods for each dependency.
+- The container or client code calls the setter methods to provide the dependencies after creating an instance of the class.
+- Setter Injection allows for optional dependencies, as the object can be instantiated without all dependencies being set immediately.
+- Setter methods can be called multiple times, allowing dependencies to be changed dynamically at runtime.
+- Setter Injection enables more flexibility in configuring and reconfiguring an object's dependencies.
+
+Example of Setter Injection in Java:
+```java
+public class MyClass {
+    private Dependency dependency;
+
+    public void setDependency(Dependency dependency) {
+        this.dependency = dependency;
+    }
+}
+```
+
+Choosing between Constructor Injection and Setter Injection depends on the specific requirements of the application. Here are some considerations:
+
+- Constructor Injection is preferred when dependencies are mandatory and need to be provided at the time of object creation. It helps ensure that an object is always in a valid state.
+- Setter Injection is useful when dependencies are optional or can change dynamically during the object's lifecycle. It offers more flexibility and makes it easier to reconfigure an object's dependencies.
+
+In general, Constructor Injection is considered a more robust approach as it enforces the completeness of dependencies at object creation time, leading to more reliable and predictable behavior. However, Setter Injection provides more flexibility and can be useful in scenarios where optional or dynamic dependencies are required.
