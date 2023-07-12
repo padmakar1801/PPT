@@ -1,0 +1,16 @@
+In the Spring Framework, the lifecycle of a bean managed by the Spring Bean Factory Container goes through several stages, allowing for initialization, dependency injection, and destruction. The bean lifecycle in Spring consists of the following phases:
+
+1. Instantiation: The first step is the creation of a new instance of the bean. This can be done through various mechanisms, such as using a constructor or a factory method. The Bean Factory Container creates and initializes the bean instance.
+
+2. Dependency Injection: Once the bean instance is created, the container performs dependency injection. It resolves and injects the dependencies of the bean, either through constructor injection, setter injection, or method injection. This ensures that the bean has all the required dependencies available.
+
+3. Initialization callbacks: After the dependencies are injected, any initialization callbacks defined on the bean are invoked. These callbacks can be implemented by implementing specific interfaces or using annotations. For example, the `InitializingBean` interface provides an `afterPropertiesSet()` method, and the `@PostConstruct` annotation can be used to define initialization methods. Developers can perform custom initialization tasks in these callbacks.
+
+4. Bean Ready for Use: Once the initialization callbacks are executed, the bean is considered fully initialized and ready for use. It can now be used by other beans or components within the application.
+
+5. Usage: During the usage phase, the bean performs its intended tasks, providing services or functionality as required by the application. The container manages the lifecycle of the bean and ensures that it remains in a valid and usable state.
+
+6. Destruction callbacks: When the application or the container decides to shut down or explicitly destroy a bean, destruction callbacks are invoked. These callbacks allow the bean to perform any necessary cleanup or release resources. Similar to initialization callbacks, destruction callbacks can be defined using specific interfaces (`DisposableBean`) or annotations (`@PreDestroy`).
+
+7. Bean Destruction: After the destruction callbacks are executed, the bean is considered destroyed and removed from the container. Any resources held by the bean are released, and it is no longer available for use.
+
