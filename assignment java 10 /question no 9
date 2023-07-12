@@ -1,0 +1,21 @@
+REST stands for Representational State Transfer. It is an architectural style and set of principles for designing networked applications. RESTful web services, also known as RESTful APIs, adhere to these principles and follow a specific set of conventions and patterns.
+
+RESTful web services are designed to be simple, lightweight, and scalable. They use the existing protocols and standards of the web, such as HTTP (Hypertext Transfer Protocol), to enable communication between clients and servers. RESTful web services allow clients to interact with server resources through well-defined, stateless operations.
+
+Key principles and characteristics of RESTful web services include:
+
+1. Resource-Oriented: RESTful web services are based on the concept of resources, which are uniquely identifiable entities. Resources can be any entity, such as a customer, product, or order, that needs to be represented and manipulated through the API.
+
+2. Uniform Interface: RESTful web services follow a uniform and consistent interface for interacting with resources. The interface is based on HTTP methods, including GET, POST, PUT, PATCH, and DELETE, which map to the standard CRUD (Create, Read, Update, Delete) operations. Each resource is identified by a unique URL (Uniform Resource Locator).
+
+3. Stateless Communication: RESTful web services are stateless, meaning that each request from a client to a server contains all the necessary information for the server to understand and process the request. The server does not maintain any client-specific session state between requests. Each request is independent and self-contained.
+
+4. Representation: Resources in RESTful web services are represented in various formats, such as JSON (JavaScript Object Notation) or XML (eXtensible Markup Language). Clients and servers use these representations to exchange data and communicate resource states.
+
+5. Hypermedia as the Engine of Application State (HATEOAS): HATEOAS is an important concept in RESTful web services. It means that the server provides links and navigation information along with the response, allowing clients to discover and navigate to related resources. HATEOAS enables a more dynamic and flexible interaction between clients and servers.
+
+By following these principles, RESTful web services provide a scalable and interoperable approach to building APIs. They are widely used in modern web and mobile applications, providing a standard and flexible way for different clients to interact with server resources.
+
+For example, an e-commerce application might expose RESTful web services to allow clients to retrieve product information, place orders, and manage their accounts. The clients can use HTTP methods to perform operations like GET to retrieve product details, POST to submit an order, PUT to update customer information, and DELETE to remove an item from the shopping cart.
+
+Overall, RESTful web services offer a lightweight and efficient approach for building web APIs, enabling the development of scalable and interoperable distributed systems.
