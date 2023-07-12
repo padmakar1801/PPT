@@ -1,0 +1,37 @@
+The Collection framework in Java provides a set of interfaces that define common operations and behaviors for working with groups of objects. Here are the key interfaces used in the Collection framework:
+
+1. Collection Interface:
+   - The root interface of the Collection hierarchy.
+   - Represents a group of objects known as elements.
+   - Provides basic operations like adding, removing, and querying elements.
+   - Subinterfaces: List, Set, and Queue.
+
+2. List Interface:
+   - Represents an ordered collection of elements, allowing duplicate elements.
+   - Provides positional access to elements using index-based methods.
+   - Subinterfaces: ArrayList, LinkedList, and Vector.
+
+3. Set Interface:
+   - Represents a collection of unique elements, disallowing duplicates.
+   - Does not maintain any specific order.
+   - Subinterfaces: HashSet, LinkedHashSet, and TreeSet.
+
+4. Queue Interface:
+   - Represents a collection designed for holding elements prior to processing.
+   - Follows the FIFO (First-In, First-Out) or priority order for element retrieval.
+   - Subinterfaces: Deque, ArrayDeque, and PriorityQueue.
+
+5. Map Interface:
+   - Represents a mapping between keys and values.
+   - Each key is associated with a unique value.
+   - Provides methods for adding, removing, and querying elements based on keys.
+   - Subinterfaces: HashMap, LinkedHashMap, TreeMap, and Hashtable.
+
+6. Deque Interface:
+   - Represents a double-ended queue that allows insertion and removal from both ends.
+   - Supports both FIFO (queue) and LIFO (stack) operations.
+   - Subinterfaces: ArrayDeque and LinkedList.
+
+These interfaces serve as a contract for implementing classes that provide specific implementations of the Collection framework. They define the available methods and behaviors that can be used to manipulate and access the elements within the collections.
+
+By utilizing these interfaces, developers can write code that is generic and flexible, as they can work with different implementations of the Collection framework interchangeably, depending on their specific needs and requirements.
