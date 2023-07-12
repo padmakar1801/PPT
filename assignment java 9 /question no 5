@@ -1,0 +1,25 @@
+Dependency Injection (DI) is a design pattern and a fundamental concept in software development, especially in the context of frameworks like the Spring Framework. It is a technique that enables the separation of object creation and dependency resolution from the objects themselves.
+
+In traditional programming, objects are responsible for creating and managing their dependencies. However, with DI, this responsibility is shifted to an external entity, typically an IoC container or a DI framework.
+
+The key idea behind Dependency Injection is to "inject" the dependencies required by an object from the outside rather than having the object create or find its dependencies. By doing so, it decouples the objects from their dependencies, promoting loose coupling and enhancing flexibility, testability, and maintainability of the code.
+
+Dependency Injection can be achieved through different mechanisms:
+
+1. Constructor Injection: Dependencies are provided through a class's constructor. The object's dependencies are explicitly declared as constructor parameters, and the container is responsible for providing the appropriate instances when creating the object.
+
+2. Setter Injection: Dependencies are set through setter methods. The object exposes setter methods for each dependency, and the container calls these setters to provide the necessary dependencies after the object is created.
+
+3. Method Injection: Dependencies are injected through specific methods. The object declares a method that accepts the required dependencies as arguments, and the container calls this method after creating the object to provide the dependencies.
+
+Dependency Injection offers several advantages:
+
+1. Loose Coupling: Objects only depend on abstractions or interfaces, rather than concrete implementations. This allows for easier substitution of dependencies, promotes modularity, and facilitates unit testing.
+
+2. Testability: With DI, it becomes easier to mock or stub dependencies during unit testing, as they can be easily replaced with test doubles. This improves the testability and isolation of individual components.
+
+3. Reusability: Dependencies can be reused across multiple objects. By injecting dependencies, the container can manage the lifecycle and configuration of dependencies separately, making them more reusable.
+
+4. Flexibility: Dependencies can be easily swapped or configured based on the application's needs. By changing the configuration in the DI container, different implementations of dependencies can be used without modifying the dependent objects.
+
+Overall, Dependency Injection is a powerful technique that promotes the separation of concerns, modular design, and maintainability in software development by decoupling objects from their dependencies and enabling external management of those dependencies.
