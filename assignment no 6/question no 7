@@ -1,0 +1,22 @@
+In Java, both Comparable and Comparator are interfaces that are used to define custom sorting orders for objects. They have different approaches and purposes when it comes to sorting. Here are the main differences between Comparable and Comparator:
+
+1. Interface Usage:
+   - Comparable: It is implemented by the class of objects that need to define their natural ordering. The Comparable interface defines the compareTo() method, which is used to compare the object with another object and determine their relative ordering.
+   - Comparator: It is a separate interface that is implemented by a separate class or can be defined anonymously. The Comparator interface defines the compare() method, which is used to compare two objects and determine their relative ordering.
+
+2. Object's Natural Ordering:
+   - Comparable: It provides a default ordering for objects based on their natural order. The natural order is defined by the class itself by implementing the compareTo() method. For example, the String class implements Comparable, so strings are sorted lexicographically by default.
+   - Comparator: It allows defining multiple custom ordering strategies for objects. It provides flexibility to define different sorting orders for the same class or for classes that do not implement Comparable.
+
+3. Implementation Location:
+   - Comparable: It is implemented within the class of the objects being compared. The compareTo() method is defined within the class itself.
+   - Comparator: It is implemented in a separate class or can be defined anonymously as a separate class. The compare() method is defined in the class implementing the Comparator interface.
+
+4. Sort Invocation:
+   - Comparable: The natural ordering defined by the compareTo() method is automatically used by sorting methods such as Collections.sort() or Arrays.sort() when sorting objects of the class implementing Comparable.
+   - Comparator: The compare() method of the Comparator is explicitly passed as an argument to the sorting methods such as Collections.sort() or Arrays.sort(). It allows sorting objects based on different custom ordering strategies.
+
+5. Class Dependency:
+   - Comparable: It adds the sorting behavior directly to the class itself, and the objects of that class are sorted based on their natural ordering. The class implementing Comparable must be modified to define its natural ordering.
+   - Comparator: It keeps the sorting behavior separate from the class being sorted. It allows defining multiple sorting strategies for the same class or sorting classes that cannot be modified.
+
