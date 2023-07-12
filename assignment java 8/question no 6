@@ -1,0 +1,20 @@
+HQL (Hibernate Query Language) is a powerful and flexible query language provided by Hibernate. It is a high-level, object-oriented query language that allows developers to write database queries in terms of their object model, rather than using SQL (Structured Query Language).
+
+Here are some key points about HQL:
+
+1. Object-Oriented Query Language: HQL is designed to work with the object model of Hibernate. It allows developers to write queries using familiar object-oriented concepts such as classes, properties, and associations between objects.
+
+2. Database Independence: HQL provides database independence, allowing developers to write queries that are portable across different database systems. Hibernate translates HQL queries into the corresponding SQL dialect for the target database.
+
+3. Syntax and Features: HQL syntax is similar to SQL, but with some additional object-oriented features. It supports various query capabilities such as selecting specific properties, filtering results with conditions, joining multiple entities, sorting, grouping, and aggregating data.
+
+4. Entity and Property Names: HQL queries use the names of persistent entities (Java classes) and their properties (fields or getter methods) instead of table and column names used in SQL. HQL queries operate at the entity level, abstracting the underlying database structure.
+
+5. Named Parameters: HQL allows the use of named parameters in queries. Named parameters are placeholders that can be assigned values at runtime, making the queries more flexible and allowing for reuse.
+
+6. Eager and Lazy Fetching: HQL supports both eager and lazy fetching strategies for associations between entities. Developers can control how related entities are loaded and fetched from the database, balancing performance and memory considerations.
+
+7. Integration with Criteria API: HQL integrates with the Hibernate Criteria API, which provides a programmatic and type-safe way to build queries. The Criteria API can be used to construct complex queries dynamically and handle dynamic filtering or sorting conditions.
+
+8. Dynamic Query Construction: HQL queries are constructed at runtime, allowing for dynamic query construction based on user input or application requirements. This flexibility makes it suitable for building dynamic and customizable queries.
+
