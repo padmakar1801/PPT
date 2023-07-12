@@ -1,0 +1,21 @@
+The Spring Framework provides several bean scopes that define the lifecycle and visibility of bean instances. Each scope determines how and when the container creates and manages bean instances. Here are the commonly used bean scopes in Spring:
+
+1. Singleton: This is the default scope for Spring Beans. It creates a single instance of the bean per container. The same instance is returned whenever the bean is requested within the container. Singleton-scoped beans are shared across the entire application.
+
+2. Prototype: In contrast to Singleton, a new instance of the bean is created every time it is requested from the container. Prototype-scoped beans are not shared and allow for multiple independent instances. It is essential to manage the lifecycle of prototype beans manually.
+
+3. Request: This scope is specific to web applications. A new instance of the bean is created for each HTTP request. The bean instance is bound to the lifecycle of the current web request and is available within that request only. Once the request is completed, the bean is destroyed.
+
+4. Session: This scope is also applicable to web applications. A new instance of the bean is created for each user session. The bean instance is tied to the user session and remains available throughout the user's session. Once the session expires, the bean is destroyed.
+
+5. Global Session: This scope is similar to the Session scope, but it is used in the context of portlet-based web applications. It creates a single instance of the bean per global session. The bean instance is shared across all portlets within the same global session.
+
+6. Application: This scope is specific to web applications running in a Portlet context. It creates a single instance of the bean per Portlet application context. The bean instance is shared across all portlets within the same application context.
+
+7. WebSocket: This scope is introduced in Spring 5.0 and is applicable to web applications that use WebSocket. A new instance of the bean is created for each WebSocket connection. The bean instance is bound to the lifecycle of the WebSocket connection.
+
+Custom scopes can also be created by implementing the `org.springframework.beans.factory.config.Scope` interface.
+
+The choice of bean scope depends on the specific requirements of your application. Singleton scope is often used for stateless beans or beans that are expensive to create, while Prototype scope is suitable for stateful beans or when a new instance is needed for each use. Request and Session scopes are utilized in web applications to manage per-request or per-session state, respectively.
+
+It's important to consider thread-safety and performance implications when selecting the appropriate bean scope for your application.
