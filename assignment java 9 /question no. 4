@@ -1,0 +1,17 @@
+IoC stands for "Inversion of Control," and an IoC container is a key concept in the Spring Framework. It is also known as the Spring container or application context. The IoC container is responsible for managing the lifecycle and configuration of application objects, also known as beans.
+
+The IoC container achieves inversion of control by taking control of creating objects, managing their dependencies, and providing them to other objects when needed. In traditional programming, objects are responsible for creating and managing their dependencies, but with an IoC container, this responsibility is inverted.
+
+The primary functions of an IoC container are:
+
+1. Object Creation: The IoC container creates and instantiates objects based on their definitions provided in the configuration. It uses various mechanisms such as constructors, factory methods, or object pooling to create the objects.
+
+2. Dependency Injection: The IoC container handles the dependencies between objects by injecting the required dependencies into the objects. It resolves dependencies either by constructor injection, setter injection, or method injection, based on the configuration.
+
+3. Configuration Management: The IoC container manages the configuration of the application. It reads the configuration files (such as XML or Java-based configuration) to determine how objects are created, wired, and managed. The container interprets the configuration and applies it during runtime.
+
+4. Lifecycle Management: The IoC container manages the lifecycle of objects, ensuring that objects are created, initialized, used, and destroyed appropriately. It can invoke lifecycle callbacks such as initialization methods and destruction methods defined on the beans.
+
+5. Aspect-Oriented Programming (AOP) Support: The IoC container provides AOP capabilities by enabling the application of cross-cutting concerns, such as logging, security, or transaction management, to specific objects or methods. It allows developers to declaratively configure aspects and applies them to the appropriate components.
+
+By utilizing an IoC container, developers can focus on defining the business logic of their application, while the container takes care of object creation, dependency resolution, and other infrastructure-related concerns. This promotes loose coupling, modularity, and easier maintenance of the application code. The Spring Framework's IoC container is known for its flexibility, extensibility, and support for different configuration styles.
