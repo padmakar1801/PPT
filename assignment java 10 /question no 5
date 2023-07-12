@@ -1,0 +1,37 @@
+The `@RequestParam` and `@PathVariable` annotations in Spring MVC are used to extract data from the request URL or request parameters, but they have different purposes and usage scenarios. Here are the key differences between these annotations:
+
+1. Purpose:
+   - `@RequestParam`: This annotation is used to bind and extract individual query parameters or form data from the request. It is typically used for optional or non-essential parameters.
+   - `@PathVariable`: This annotation is used to extract dynamic values from the request URL path. It is typically used for mandatory or essential parameters that are part of the URL structure.
+
+2. Usage:
+   - `@RequestParam`: It is applied to method parameters of controller methods. By default, it expects the parameter to be present in the request as a query parameter (e.g., `?param=value`). The parameter name in the annotation should match the query parameter name, or you can specify the parameter name explicitly using the `value` attribute.
+   - `@PathVariable`: It is applied to method parameters of controller methods. It extracts the variable value from the URL path itself. The parameter name in the annotation should match the variable name in the URL path, or you can specify the variable name explicitly using the `value` attribute.
+
+3. Presence:
+   - `@RequestParam`: It can handle both required and optional parameters. By default, if the parameter is not present in the request, it will throw an exception. To handle optional parameters, you can set the `required` attribute of `@RequestParam` to `false` and provide a default value using the `defaultValue` attribute.
+   - `@PathVariable`: It requires the variable to be present in the URL path. If the variable is not found, it will result in a 404 error. Path variables are typically mandatory and represent an integral part of the URL structure.
+
+4. URL Mapping:
+   - `@RequestParam`: The parameter value is not part of the URL path; it is appended to the URL as query parameters.
+   - `@PathVariable`: The parameter value is extracted from the URL path itself. It is typically used when a part of the URL is dynamic and needs to be captured as a parameter.
+
+Here's an example to illustrate the usage of these annotations:
+
+```java
+@Controller
+@RequestMapping("/example")
+public class ExampleController {
+
+    @GetMapping("/endpoint")
+    public String handleRequest(@RequestParam("param") String param) {
+        // Process the request parameter
+        return "view";
+    }
+
+    @GetMapping("/endpoint/{id}")
+    public String handleRequest(@PathVariable("id") Long id) {
+        // Process the path variable
+        return "view";
+    }
+}
