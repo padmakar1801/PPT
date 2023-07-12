@@ -1,0 +1,17 @@
+JDBC (Java Database Connectivity) is a Java API that allows Java programs to interact with relational databases. It provides a set of classes and interfaces that enable database connectivity and the execution of SQL (Structured Query Language) statements.
+
+The main uses of JDBC in Java are:
+
+1. Database Connectivity: JDBC allows Java programs to establish connections to a wide range of relational databases, such as MySQL, Oracle, PostgreSQL, and SQL Server. It provides a standardized way to connect to databases, irrespective of the specific database vendor.
+
+2. SQL Execution: JDBC enables the execution of SQL statements against the connected database. It supports the execution of SQL queries to retrieve data, SQL statements to modify the data (insert, update, delete), and SQL statements to create or modify database schema (create table, alter table, etc.).
+
+3. Prepared Statements and Parameterized Queries: JDBC supports prepared statements, which allow developers to pre-compile SQL statements with placeholders for input values. This provides several benefits, including improved performance, prevention of SQL injection attacks, and reusability of SQL statements.
+
+4. Transaction Management: JDBC supports transaction management, allowing developers to define and control database transactions. Transactions ensure that a group of database operations are treated as a single unit of work, providing atomicity, consistency, isolation, and durability (ACID properties).
+
+5. Metadata Access: JDBC provides metadata interfaces that allow developers to obtain information about the database, such as the structure of tables and columns, supported data types, constraints, and indexes. This metadata can be used for various purposes, such as dynamically generating SQL statements or building dynamic user interfaces.
+
+6. Error Handling and Exception Management: JDBC provides exceptions and error handling mechanisms to handle database-related errors gracefully. It allows developers to catch and handle exceptions that may occur during database operations, providing better error reporting and recovery capabilities.
+
+By using JDBC, Java developers can build robust and efficient database-driven applications. It provides a standardized and portable way to connect to databases, execute SQL statements, manage transactions, and retrieve metadata. JDBC acts as a bridge between Java applications and relational databases, enabling seamless integration of Java code with database operations.
