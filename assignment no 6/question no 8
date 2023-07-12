@@ -1,0 +1,10 @@
+In Java's HashMap, a collision occurs when two or more keys are hashed to the same bucket or index in the underlying array used to store the key-value pairs. This situation arises due to the finite number of buckets available in the HashMap relative to the potentially infinite number of possible hash codes.
+
+When a collision occurs, the HashMap needs to handle it to ensure correct retrieval and storage of key-value pairs. Here's how collisions are typically handled in HashMap:
+
+1. Chaining: HashMap uses a technique called chaining to handle collisions. Each bucket in the HashMap contains a linked list or a similar data structure to hold multiple entries that have hashed to the same bucket. When a collision occurs, a new entry is appended to the linked list in the corresponding bucket. This way, multiple key-value pairs with the same hash code can coexist in the HashMap.
+
+2. Equals method: To resolve collisions, HashMap uses the equals() method to compare keys within the linked list. When retrieving a value for a specific key, the HashMap traverses the linked list in the bucket corresponding to the key's hash code, comparing each key in the list with the target key using the equals() method until a match is found.
+
+3. Performance impact: Collisions in HashMap can affect the performance of certain operations. In the worst case scenario, where all keys hash to the same bucket, the time complexity of operations like get() and put() can degrade from O(1) (constant time) to O(n) (linear time), as the HashMap essentially behaves like a linked list. However, in practice, the performance degradation is minimal, thanks to the hash function's ability to distribute the keys evenly across buckets.
+
