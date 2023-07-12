@@ -1,0 +1,23 @@
+ORM (Object-Relational Mapping) is a programming technique used in Hibernate, a popular Java framework for object-relational mapping. Hibernate simplifies the development of database-driven applications by providing a layer of abstraction between the application's object model and the underlying relational database.
+
+ORM allows developers to map Java objects to database tables, and it handles the transparent conversion of data between the object-oriented model and the relational model. Hibernate provides mechanisms to define the mapping between the Java classes and database tables, as well as the relationships between different entities.
+
+Key features and benefits of ORM in Hibernate:
+
+1. Object-Relational Mapping: ORM in Hibernate maps Java objects (entities) to database tables and their attributes to columns. It eliminates the need to write low-level SQL queries and handle manual object-to-relational conversions.
+
+2. Persistence: ORM in Hibernate enables the persistence of Java objects in the database. It automatically manages the creation, updating, retrieval, and deletion (CRUD operations) of objects, relieving developers from writing explicit SQL statements.
+
+3. Data Integrity: Hibernate manages relationships between entities, including one-to-one, one-to-many, and many-to-many associations. It ensures data integrity by automatically synchronizing changes made to related entities.
+
+4. Database Independence: Hibernate abstracts away the differences in database systems, allowing developers to write database-agnostic code. The same application can run on different databases without modifications.
+
+5. Caching and Performance: Hibernate provides a level of caching to improve application performance. It can cache frequently accessed data in memory, reducing the number of database queries and enhancing application responsiveness.
+
+6. Transaction Management: ORM in Hibernate integrates with transaction management mechanisms, such as Java Transaction API (JTA) and Java Database Connectivity (JDBC) transactions. It ensures that database operations are performed within atomic, consistent, isolated, and durable (ACID) transactions.
+
+7. Querying Language: Hibernate offers Hibernate Query Language (HQL), which is a powerful and flexible query language similar to SQL. HQL allows developers to express queries using object-oriented concepts rather than database-specific SQL syntax.
+
+8. Lazy Loading and Eager Loading: Hibernate supports lazy loading, where associated entities are loaded from the database only when accessed. This helps minimize unnecessary database queries. Alternatively, eager loading can be used to fetch associated entities along with the main entity to optimize performance.
+
+ORM in Hibernate provides a higher level of abstraction, simplifying the interaction between Java objects and relational databases. It offers increased productivity, portability, and maintainability in database-driven applications.
