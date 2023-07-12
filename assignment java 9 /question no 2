@@ -1,0 +1,9 @@
+The Spring Framework offers a wide range of features and functionalities that facilitate the development of enterprise-level Java applications. Here are some key features of the Spring Framework:
+
+Inversion of Control (IoC) Container: The Spring IoC container manages the lifecycle and dependencies of application objects (beans). It promotes loose coupling and modular development by providing dependency injection (DI), where dependencies are injected into objects from external sources.
+
+Dependency Injection (DI): Spring supports DI, which allows for the decoupling of components and promotes reusable and testable code. It simplifies the management of object dependencies by allowing them to be declared and injected into beans using annotations, XML configuration, or Java-based configuration.
+
+Aspect-Oriented Programming (AOP): Spring supports AOP, which enables the modularization of cross-cutting concerns such as logging, security, and transaction management. AOP allows developers to separate these concerns from the core business logic, improving code maintainability and readability.
+
+Spring MVC (Model-View-Controller): Spring MVC is a web framework that follows the MVC architectural pattern. It provides a robust and flexible framework for building web applications
